@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url("./images/1.jpg");
+        }
+
+        div{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .a1{
+            margin-left: 17px;
+            margin-bottom: 10px;
+          
+        }
+
+        .a3{
+            margin-left: 120px;
+        }
+
+        .a2{
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>登录页面，如果登录成功，进入主页。主页是ejs</h1>
+        <form action="/sclogin.do" method="post">
+            用户名：<input type="text" name="username" class="a2">
+            <br>
+            密码：<input type="text" name="password" class="a1">
+            <br>
+            <input type="submit" value="Login" class="a3">
+        </form>
+    </div>
+     
+    
+</body>
+</html>

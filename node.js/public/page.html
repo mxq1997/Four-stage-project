@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/page.css">
+</head>
+<body>
+    <h1>分页</h1>
+
+    <div id="content">
+        <table id="userTable" cellspacing="0" cellpadding="0" border="1" width="600">
+            <tr>
+                <th>学生编号</th>
+                <th>学生姓名</th>
+                <th>学生分数</th>
+                <th>班级ID</th>
+                <th>性别</th>
+            </tr>
+            <tbody id="studentTable">
+            <tr>
+                <td>admin</td>
+                <td>password</td>
+                <td>password</td>
+                <td>password</td>
+                <td>password</td>
+            </tr>
+    
+            </tbody>
+    
+        </table>
+     
+    </div>
+    <div id="button">
+        <button onclick="prevPage()">上一页</button>
+        <div id="numberBlock"></div>
+        <button onclick="nextPage()">下一页</button>
+        <div>总共 <span id="totalPage"></span>页</div>
+    </div>
+<script src="./js/ajax.js"></script>
+<script src="./js/page.js"></script>
+
+</body>
+</html>

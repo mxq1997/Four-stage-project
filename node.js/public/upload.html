@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/upload.css">
+</head>
+<body>
+    <div>
+        <h1>文件上传</h1>
+        <form action="/upload.do" method="POST" enctype="multipart/form-data">
+            <input type="file" name="myfile" >
+            <button>上传</button>
+        
+        
+        </form>
+
+        <h1>多文件上传</h1>
+        <form action="/uploads.do" method="POST" enctype="multipart/form-data">
+            <input type="file" name="myfiles"  multiple="multiple">
+            <button>多文件上传</button>
+        
+        
+        </form>
+        <h1>文件下载</h1>
+            <a href="./uploads/1-1592234759400.png" id="a1">点击下载文件</a>
+
+            <a href="/fileDownload.do" id="a2">
+                <button>点击下载文件BTN</button>
+            </a>
+    </div>
+   
+</body>
+</html>

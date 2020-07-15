@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--1.SQL Lite
+       1）创建连接对象
+       2）发起连接
+       3）执行sql语句
+
+
+
+     2.no SQL-->
+
+
+<form action="">
+    用户名：<input type="text" id="username">
+    密码：<input type="password" id="password">
+    <button type="button" onclick="queryUser()">提交</button>
+</form>
+
+<div id="msg"></div>
+
+
+<script>
+    //1）创建连接对象
+    /*openDatabase(参数1,参数2,参数3,参数4)
+    参数1：数据库名称
+    参数2：数据库版本，可选，没有就留空
+    参数3：数据库描述，没有就留空
+    参数4：数据库大小  10MB ，单位: byte
+    1MB=1024KB  1kb=1024b byte
+
+    10MB=10*1024*1024
+    *
+    *
+    * */
+    let db=openDatabase("myBase","","",10*1024*1024);//创建数据库的连接对象
+    //
+    //
+    // //2）发起连接
+    db.transaction(function (tx) {//
+       //3.执行sql语句
+      //tx.executeSql("create table if not exists t_user(u_name varchar(50),u_pwd varchar(50))");
+
+      tx.executeSql("create table if not exists t_user2(u_id int primary key,u_name varchar(50),u_pwd varchar(50))");
+
+    });
+    let no=2;
+    function getName() {
+        let username=document.getElementById("username").value;
+        let password=document.getElementById("password").value;
+
+        let db=openDatabase("myBase","","",10*1024*1024);
+
+        db.transaction(function (tx) {
+            tx.executeSql("insert into t_user2(u_id,u_name,u_pwd) values (?,?,?)",[no,username,password],function (trans,rs) {
+                console.log("成功信息"+rs)
+            },function (trans,err) {
+                console.log(err);
+            })
+        });
+        no++;
+
+    }
+
+
+    function queryUser() {
+        let username=document.getElementById("username").value;
+        let password=document.getElementById("password").value;
+
+        let db=openDatabase("myBase","","",1024*1024*10);
+
+        db.transaction(function (tx) {
+            tx.executeSql("select * from t_user2",[],function (trans,rs) {
+                console.log(rs.rows.length);//查出数据的数量
+                //console.log(rs.rows[0].u_name);
+                // for(let i=0;i<rs.rows.length;i++){
+                //     document.getElementById("msg").innerHTML+=`<h2>用户名: ${rs.rows[i].u_name}</h2>`
+                // }
+            let tId=rs.rows.length+1;
+
+            tx.executeSql("insert into t_user2(u_id,u_name,u_pwd) values (?,?,?)",[tId,username,password],function (trans,rs) {
+                console.log("成功信息"+rs);
+            },function (trans,err) {
+                console.log(err);
+            })
+
+
+            },function (trans,err) {
+                console.log(err);
+            })
+        })
+    }
+</script>
+</body>
+</html>

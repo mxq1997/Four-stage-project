@@ -1,46 +1,38 @@
 <template>
   <div id="app">
-    <div style="width:1080px;margin:0 auto;">
-      <Banner :banners="banners" :da="2000"></Banner>
-    </div>
-   
+    <!-- <router-view></router-view> -->
+    <display />
   </div>
 </template>
 
 <script>
- import Banner from './components/Banner.vue'
-export default {
+  import display from './components/display.vue'
+  export default {
+  name: 'App',
   components:{
-    Banner:Banner,
-  },
-  data(){
-    return {
-      banners:[
-        {
-          url:require('../src/assets/images/banner1.jpg'),
-          link:'https://www.baidu.com'
-        },
-        {
-          url:require('../src/assets/images/banner2.jpg'),
-          link:'https://www.baidu.com'
-        },
-        {
-          url:require('../src/assets/images/banner3.jpg'),
-          link:'https://www.baidu.com'
-        }
-      ]
-    }
+    display,
   }
 }
 </script>
 
 <style>
-/* #app {
+#app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-} */
+  display: flex;
+  width: 1200px;
+  height: 1000px;
+  margin: 0 auto
+}
+.mycenterlist{
+  margin-right: 50px;
+}
+.order{
+  margin-bottom: 15px;
+}
+
 </style>

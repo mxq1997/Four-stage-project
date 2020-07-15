@@ -1,0 +1,19 @@
+body{
+    background-image: url("../images/1.jpg");
+}
+
+h1{
+    text-align: center;
+}
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+input{
+    padding-left: 10px;
+    padding-right: 10px;
+}

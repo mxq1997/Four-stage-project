@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            background-image: url("./images/1.jpg");
+        }
+        div{
+            width: 500px;
+            height: 300px;
+            border:1px solid black;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            align-items: center;
+        }
+        /* h3{
+            text-align: center;
+            
+        } */
+        form{
+            margin-top: 30px;
+            
+        }
+        
+        #username{
+            margin-bottom: 10px;
+        }
+        #mxq{
+            margin-left: 96px;
+            margin-top: 20px;
+        }
+
+    </style>
+ 
+</head>
+<body>
+    <div>
+        <h3>欢迎来到金太阳幼儿园</h3>
+        <form action="/login.do" method="post">
+            用户：<input type="text" name="username" id="username">
+            <span id="msg"></span>
+            <br>
+            密码：<input type="password" name="password" id="password">
+            <br>
+             <input type="submit" value="提交" name="" id="mxq">
+        </form>
+        
+        <script src="./js/regget.js"></script>
+        <script src="./js/regpost.js"></script>
+     
+    </div>    
+     
+ 
+</body>
+</html>

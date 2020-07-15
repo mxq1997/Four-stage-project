@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--本地存储：localStorage 和 sessionStorage-->
+
+<!--localStorage：持久化的本地存储，没有时间限制，小于5MB的数据-->
+
+<!--sessionStorage:临时保存在session对象中，关闭浏览器就消失，不是持久化的本地存储-->
+
+
+<form action="sucess.html">
+    用户名: <input type="text" id="username">
+    <br>
+    <!--session Storage-->
+    <button type="button" onclick="getName()">sessionStorage提交</button>
+    <!--local Storage-->
+    <button type="button" onclick="getName2()">localStorage提交</button>
+    
+    <!--删除-->
+    <button onclick="removeSt()">移除</button>
+
+    <!--获取其他信息-->
+    <button type="button" onclick="getMsg()">获取其他信息</button>
+</form>
+
+<script>
+    function getName2() {
+        let username=document.getElementById("username").value;
+
+      //  localStorage.setItem("myUser1",username);
+      //   localStorage.setItem("myUser2","hello");
+      //   localStorage.setItem("myUser3","桃桃");
+      //   localStorage.setItem("myUser4","毛毛");
+
+
+        //在localStorage中储存的永远都是字符串格式
+        let obj={"myname":username,"sex":"妖"};
+        let objStr=JSON.stringify(obj);
+        localStorage.setItem("myObj",objStr);
+        document.forms[0].submit();
+
+
+    }
+
+
+
+    function getName() {
+        let username=document.getElementById("username").value;
+
+        console.log(username);
+        //方法1：
+        sessionStorage.myUser=username;
+
+        //方法2：
+        // sessionStorage.setItem("myUser",username);
+
+        document.forms[0].submit();
+
+        /*注意！l两个完全没有关联的页面是无法相互获取到sessionStorage的值的*/
+    }
+    
+    //移除
+    function removeSt() {
+      //  localStorage.removeItem("myUser4");   移除指定内容
+
+        localStorage.clear();//清空所有
+    }
+
+    function getMsg() {
+        console.log(localStorage.length);//localStorage中信息的条数
+        console.log(localStorage.key(0));//指定缩影下标对应的键名
+    }
+</script>
+</body>
+</html>

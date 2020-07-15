@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mycanvas{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<canvas id="mycanvas" height="700" width="1800"></canvas>
+<script>
+    var c=document.getElementById("mycanvas");
+    var ctx=c.getContext("2d");
+
+        // mycontent.beginPath();
+        // mycontent.moveTo(500,50);
+        // mycontent.lineTo(460,150)
+        // mycontent.strokeStyle="green"
+        // // mycontent.lineTo(500,150)
+        // // mycontent.strokeStyle="black"
+        // // mycontent.lineWidth=2;
+        // // mycontent.closePath();
+        // mycanvas.stroke();
+        ctx.moveTo(500,50);
+        ctx.lineTo(460,200);
+        ctx.lineTo(500,200)
+        ctx.fillStyle="green";
+        ctx.closePath()
+        ctx.fill();
+        ctx.moveTo(500,50);
+        ctx.lineTo(540,200);
+        ctx.lineTo(500,200);
+        ctx.closePath();
+        ctx.fill();
+        
+
+
+        ctx.moveTo(500,200);
+        ctx.lineTo(420,300);
+        ctx.lineTo(500,300)
+        ctx.closePath()
+        ctx.fill();
+        ctx.moveTo(500,200);
+        ctx.lineTo(580,300);
+        ctx.lineTo(500,300);
+        ctx.closePath();
+        ctx.fill();
+
+        ctx.moveTo(500,300);
+        ctx.lineTo(360,400);
+        ctx.lineTo(500,400)
+        ctx.closePath()
+        ctx.fill();
+        ctx.moveTo(500,300);
+        ctx.lineTo(640,400);
+        ctx.lineTo(500,400);
+        ctx.closePath();
+        ctx.fill();
+
+        ctx.fillRect(480,400,40,180);
+        
+        
+
+
+</script>
+    
+</body>
+ 
+</html>

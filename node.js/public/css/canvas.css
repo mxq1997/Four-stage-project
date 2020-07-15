@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#main{
+    position: relative;
+}
+canvas{
+    border: 1px solid black;
+    margin-left: 10px;
+}
+#cutbox{
+    width: 270px;
+    height: 270px;
+    border: 2px solid black;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    z-index: 1;
+    cursor: pointer;
+}
+.flet{
+    float: left;
+}
+.clear{
+    clear: both;
+}
+/* #imgshow{
+    
+} */
+#myimg{
+    display: none;
+}

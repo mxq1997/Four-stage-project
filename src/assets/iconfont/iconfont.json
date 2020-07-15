@@ -1,0 +1,37 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "563688",
+      "name": "爱心",
+      "font_class": "aixin",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    },
+    {
+      "icon_id": "5435858",
+      "name": "记事本",
+      "font_class": "jishiben",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "10404258",
+      "name": "个人信息",
+      "font_class": "gerenxinxi",
+      "unicode": "e95a",
+      "unicode_decimal": 59738
+    },
+    {
+      "icon_id": "10869392",
+      "name": "账户",
+      "font_class": "zhanghu",
+      "unicode": "e6d6",
+      "unicode_decimal": 59094
+    }
+  ]
+}

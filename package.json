@@ -1,5 +1,5 @@
 {
-  "name": "four",
+  "name": "myselfcenter",
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "'mxq' <'1179919598@qq.com'>",
@@ -34,7 +34,7 @@
     "chromedriver": "^2.27.2",
     "copy-webpack-plugin": "^4.0.1",
     "cross-spawn": "^5.0.1",
-    "css-loader": "^0.28.0",
+    "css-loader": "^0.28.11",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^1.1.4",
     "friendly-errors-webpack-plugin": "^1.6.1",
